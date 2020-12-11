@@ -3,6 +3,17 @@
   margin: 0;
 }
 
+body {
+  background-image: url(https://source.unsplash.com/random);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 a  {
   color: inherit;
   text-decoration: none;
@@ -32,6 +43,10 @@ li  {
   margin-left: 0;
 }
 
-.icon {
+.icon-times,
+.icon-check,
+.icon-square,
+.icon-ellipsis {
   height: 22px;
+  color: white;
 }

@@ -2,7 +2,7 @@ const greetingScreen = document.querySelector('.greeting-screen');
 const askNameInput = document.querySelector('.askNameInput');
 const askNameForm = document.querySelector('.askNameForm');
 
-const USER_LS = "currentUser"
+const USER_LS = "currentUser";
 
 function saveName(text) {
   localStorage.setItem(USER_LS, text);
@@ -21,7 +21,25 @@ function askUserName() {
 }
 
 function greetingUser(text) {
-  greetingScreen.innerText = `만나서 반가워요, ${text}`;
+  const now = new Date();
+  const hours = now.getHours();
+  console.log(hours);
+  function greetingMessage(hours) {
+    let result;
+    if (5 < hours < 6) {
+    result ='잘자요!';
+    } else if (3 < hours < 12) {
+    result ='좋은 아침입니다!';
+    } else if (11 < hours < 14) {
+    result ='점심 맛있게 먹었나요?';
+    } else if (11 < hours < 18) {
+    result ='활기한 하루 되세요!';
+    } else {
+      result = "좋은 저녁입니다!";
+    }
+    return result;
+  }
+  greetingScreen.innerText = `${greetingMessage(hours)} ${text}님`;
 }
 function loadUser() {
   const currentUser = localStorage.getItem(USER_LS);
@@ -32,7 +50,7 @@ function loadUser() {
   };
 }
 
-function init(){
+function init() {
   loadUser();
 }
 
