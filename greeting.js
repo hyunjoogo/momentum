@@ -26,13 +26,13 @@ function greetingUser(text) {
   console.log(hours);
   function greetingMessage(hours) {
     let result;
-    if (5 < hours < 6) {
+    if (5 < hours && hours < 6) {
     result ='잘자요!';
-    } else if (3 < hours < 12) {
+    } else if (3 < hours && hours < 12) {
     result ='좋은 아침입니다!';
-    } else if (11 < hours < 14) {
+    } else if (11 < hours && hours < 14) {
     result ='점심 맛있게 먹었나요?';
-    } else if (11 < hours < 18) {
+    } else if (11 < hours && hours < 18) {
     result ='활기한 하루 되세요!';
     } else {
       result = "좋은 저녁입니다!";
