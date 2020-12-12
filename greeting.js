@@ -1,6 +1,9 @@
 const greetingScreen = document.querySelector('.greeting-screen');
+const helloScreen = document.querySelector('.hello-screen');
 const askNameInput = document.querySelector('.askNameInput');
 const askNameForm = document.querySelector('.askNameForm');
+const askNameSection = document.querySelector('.askname');
+const mainSection = document.querySelector('.main-wrapper');
 
 const USER_LS = "currentUser";
 
@@ -12,8 +15,14 @@ function saveName(text) {
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = askNameInput.value;
-  greetingUser(currentValue)
+  askNameSection.classList.add('disappear');
   saveName(currentValue);
+  helloScreen.classList.add('showing-hello');
+  helloScreen.innerText = `반가워요! ${currentValue}님`;
+  setTimeout(function() {
+    greetingUser(currentValue);
+    console.log('이벤트 보냄');
+  }, 5000);
 }
 
 function askUserName() {
@@ -38,6 +47,10 @@ function greetingUser(text) {
     }
     return result;
   }
+  helloScreen.classList.remove('showing-hello');
+  helloScreen.classList.add('disappear');
+  mainSection.classList.add('showing');
+  askNameSection.classList.add('noshow');
   greetingScreen.innerText = `${greetingMessage(hours)} ${text}님`;
 }
 function loadUser() {

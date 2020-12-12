@@ -4,7 +4,8 @@
 }
 
 body {
-  background-image: url(https://source.unsplash.com/random);
+  /* background-image: url(https://source.unsplash.com/random); */
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,6 +13,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 13px;
 }
 
 a  {
@@ -19,29 +22,25 @@ a  {
   text-decoration: none;
 }
 
-button,
-input,
-textarea  {
+input {
   border: none;
+  background-color: inherit;
+  border-bottom: 2px solid white;
+  caret-color: white;
+  text-align: center;
+  color: white;
+  font-size: ;
 }
 
-button:focus,
-button:active,
-input:focus,
-input:active,
-textarea:focus,
-textarea:active  {
+input:focus {
   outline: none;
-  box-sizing: none;
 }
 
-ul,
-ol,
-li  {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0;
+h1 {
+  font-size: 54px;
 }
+
+/* icon common */
 
 .icon-times,
 .icon-check,
@@ -49,4 +48,113 @@ li  {
 .icon-ellipsis {
   height: 22px;
   color: white;
+}
+
+/* Weather */
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+}
+
+.weather-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.weather-icon img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+.weather-temp {
+  font-size: 200%;
+}
+
+/* Askname */
+
+.askname {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 46%;
+  left: 25%;
+  z-index: 1;
+}
+
+.askNameInput {
+  font-size: 300%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: 300px;
+}
+
+.hello-screen {
+  position: absolute;
+  top: 56%;
+  left: 34%;
+  opacity: 0;
+}
+/* Main Wrapper  */
+
+.main-wrapper {
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Clock */
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.clock-screen {
+  font-size: 168px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -5px;
+}
+
+/* Greeting */
+
+.greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transition setting */
+
+.disappear {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
+.showing {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+  transition-delay: 1000ms;
+}
+
+.showing-hello {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+  transition-delay: 2000ms;
+}
+
+.noshow {
+  opacity: 0;
 }

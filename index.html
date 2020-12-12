@@ -13,20 +13,23 @@
 <body>
   <div class="all-wrapper">
     <div class="weather">
-      <div class="weather-icon">
-        <img src="icons/unknown.png" />
+      <div class="weather-box">
+        <span class="weather-temp"></span>
+        <div class="weather-icon">
+        </div>
       </div>
-      <span class="weather-desc"></span>
+      <span class="weather-city"></span>
     </div>
-    <div class="askname-wrapper">
+    <h1 class="hello-screen"></h1>
+    <section class="askname">
       <h1>당신의 이름은 무엇인가요?</h1>
       <form action="" method="GET" class="askNameForm">
         <input type="text" class="askNameInput">
       </form>
-    </div>
-    <div class="main-wrapper disappear">
+    </section>
+    <div class="main-wrapper">
       <section class="clock">
-        <h1 class="clock-screen"></h1>
+        <span class="clock-screen"></span>
         <div class="icon-wrapper">
           <i class="fas fa-ellipsis-h icon-ellipsis"></i>
         </div>
