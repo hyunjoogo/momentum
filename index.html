@@ -7,12 +7,19 @@
   <script src="https://kit.fontawesome.com/433848c43a.js" crossorigin="anonymous"></script>
   <script src="./clock.js" defer></script>
   <script src="./greeting.js" defer></script>
+  <script src="./weather.js" defer></script>
   <title>Momentum clone</title>
 </head>
 <body>
   <div class="all-wrapper">
+    <div class="weather">
+      <div class="weather-icon">
+        <img src="icons/unknown.png" />
+      </div>
+      <span class="weather-desc"></span>
+    </div>
     <div class="askname-wrapper">
-      <h1>당신의 자랑스러운 이름은 무엇인가요?</h1>
+      <h1>당신의 이름은 무엇인가요?</h1>
       <form action="" method="GET" class="askNameForm">
         <input type="text" class="askNameInput">
       </form>
