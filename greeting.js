@@ -39,7 +39,7 @@ function greetingUser(text) {
     } else if (5 < hours && hours < 12) {
     result ='좋은 아침입니다!';
     } else if (11 < hours && hours < 14) {
-    result ='점심 맛있게 먹었나요?';
+    result ='점심 맛있게 드셨나요?';
     } else if (11 < hours && hours < 18) {
     result ='활기한 하루 되세요!';
     } else {

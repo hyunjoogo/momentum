@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="23.css">
   <script src="https://kit.fontawesome.com/433848c43a.js" crossorigin="anonymous"></script>
   <script src="./clock.js" defer></script>
   <script src="./greeting.js" defer></script>
@@ -11,56 +13,70 @@
   <title>Momentum clone</title>
 </head>
 <body>
-  <div class="all-wrapper">
-    <div class="weather">
-      <div class="weather-box">
-        <span class="weather-temp"></span>
-        <div class="weather-icon">
-        </div>
+  <section class="weather">
+    <div class="weather-box">
+      <span class="weather-temp"></span>
+      <div class="weather-icon">
       </div>
-      <span class="weather-city"></span>
     </div>
-    <h1 class="hello-screen"></h1>
-    <section class="askname">
-      <h1>당신의 이름은 무엇인가요?</h1>
-      <form action="" method="GET" class="askNameForm">
-        <input type="text" class="askNameInput">
-      </form>
-    </section>
-    <div class="main-wrapper">
-      <section class="clock">
-        <span class="clock-screen"></span>
-        <div class="icon-wrapper">
-          <i class="fas fa-ellipsis-h icon-ellipsis"></i>
+    <span class="weather-city"></span>
+  </section>
+  <h1 class="hello-screen"></h1>
+  <section class="askname">
+    <h1>당신의 이름은 무엇인가요?</h1>
+    <form action="" method="GET" class="askNameForm">
+      <input type="text" class="askNameInput">
+    </form>
+  </section>
+  <div class="main-wrapper">
+    <section class="clock">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-4"></div>
+        <div class="col-sm-6 col-md-4">
+          <span class="clock-screen"></span>
         </div>
-      </section>
-      <section class="greeting">
-        <h1 class="greeting-screen"></h1>
-      </section>
-      <section class="importantWork">
-        <div class="importantWork-ask__container">
-          <h1 class="importantwork-ask">오늘 가장 중요한 일은 무엇인가요?</h1>
-          <form action="" method="GET" class="importantwork-form">
-            <input type="text" class="importantwork-input">
-          </form>
-        </div>
-        <div class="importantwork-screen__container">
-          <h3 class="importantwork-screen-today">Today</h3>
-          <div class="importantwork-screen-list">
-            <div class="importantwork-screen-check">
-              <i class="far fa-square icon-square"></i>
-              <i class="fas fa-check icon-check"></i>
+        <div class="col-sm-3 col-md-4">
+          <div class="more-wrapper">
+            <div class="icon-wrapper">
+              <i class="fas fa-ellipsis-h icon-ellipsis"></i>
             </div>
-            <span class="importantWork-screen-text"></span>
-            <span class="importantwork-screen-del">
-              <i class="fas fa-times icon-times"></i>
-            </span>
+            <div class="dropdown-menu">
+              <input id="s2" type="checkbox" class="switch" checked>
+              <label for="s2">12/24</label>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="quotes">
-      </section>
-    </div>
+      </div>
+    </section>
+    <section class="greeting">
+      <h1 class="greeting-screen"></h1>
+    </section>
+    <section class="importantWork">
+      <div class="importantWork-ask__container">
+        <h2 class="importantwork-ask">오늘 가장 중요한 일은 무엇인가요?</h2>
+        <form action="" method="GET" class="importantwork-form">
+          <input type="text" class="importantwork-input">
+        </form>
+      </div>
+      <div class="importantwork-screen__container">
+        <h3 class="importantwork-screen-today">Today</h3>
+        <div class="importantwork-screen-list">
+          <div class="importantwork-screen-check">
+            <i class="far fa-square icon-square"></i>
+            <i class="fas fa-check icon-check"></i>
+          </div>
+          <span class="importantWork-screen-text"></span>
+          <span class="importantwork-screen-del">
+            <i class="fas fa-times icon-times"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section class="quotes">
+    </section>
   </div>
 </body>
 </html>

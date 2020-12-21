@@ -9,12 +9,14 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 13px;
+  text-shadow: 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 a  {
@@ -29,7 +31,6 @@ input {
   caret-color: white;
   text-align: center;
   color: white;
-  font-size: ;
 }
 
 input:focus {
@@ -38,6 +39,8 @@ input:focus {
 
 h1 {
   font-size: 54px;
+  word-break: keep-all;
+  text-align: center;
 }
 
 /* icon common */
@@ -53,29 +56,31 @@ h1 {
 /* Weather */
 
 .weather {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 10px 20px;
+  align-items: flex-end;
+  padding-right: 10px;
 }
 
 .weather-box {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .weather-icon img {
   width: 40px;
-  margin: 0 10px;
 }
 
 .weather-temp {
   font-size: 200%;
+  display: inline-block;
+  padding-left: 15px;
+  padding-top: 3px;
+}
+
+.weather-city {
 }
 
 /* Askname */
@@ -104,20 +109,18 @@ h1 {
   left: 34%;
   opacity: 0;
 }
-/* Main Wrapper  */
+/* Main Wrapper */
 
 .main-wrapper {
+  width: 100%;
   opacity: 0;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* Clock */
 
 .clock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 200px;
+  position: relative;
 }
 
 .clock-screen {
@@ -156,5 +159,43 @@ h1 {
 }
 
 .noshow {
-  opacity: 0;
+  display: none;
+}
+
+/* Icon Setting */
+
+.more-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-wrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.icon-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-ellipsis {
+  font-size: 24px;
+  position: absolute;
+}
+
+.dropdown-menu {
+  width: 100%;
+  position: relative;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.dropdown-menu:hover {
+  background-color: tomato;
 }
