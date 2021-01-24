@@ -1,0 +1,38 @@
+/* 체크박스 토글버튼 */
+#hour12 {
+  position: absolute;
+  left: -1000%;
+}
+label {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #d3d3d3;
+  border-radius: 60px;
+  transition: background 400ms;
+}
+label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+  transition: all 400ms;
+}
+input:checked + label {
+  background: var(--color-menu);
+}
+input:checked + label:after {
+  /* label:after : 원 width + left */
+  left: calc(100% - 20px);
+  right: 5px;
+}
+label span {
+  display: none;
+}

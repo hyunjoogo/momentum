@@ -1,0 +1,68 @@
+/* 처음 이름 묻기 */
+
+.askName,
+.helloScreen {
+  background-color: var(--color-background);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+}
+.askNameForm {
+  display: flex;
+  flex-direction: column;
+}
+.askNameText,
+.helloScreen {
+  font-size: 54px;
+  text-align: center;
+  color: var(--color-font);
+}
+.askNameInput {
+  font-size: 54px;
+}
+
+.helloScreen {
+  visibility: hidden;
+}
+
+@keyframes hidesplashscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes splashscreen {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.disappear {
+  animation: hidesplashscreen 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.appear {
+  animation: splashscreen 3s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.askNameText {
+  color: var(--color-font);
+}

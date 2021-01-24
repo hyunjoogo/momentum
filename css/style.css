@@ -1,0 +1,80 @@
+@import "topbar.css";
+@import "clock.css";
+@import "frame.css";
+@import "askname.css";
+@import "middle.css";
+@import "togglebtn.css";
+@import "greeting.css";
+@import "todo.css";
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* color*/
+  --color-background: #222529; /* 배경색상 */
+  --color-font: #ffffff;
+  --color-point: #dcbc95;
+  --color-subfont: #cccdcd;
+  --color-menu: #2d3034;
+}
+
+body {
+  background-color: var(--color-background);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a  {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: "DM sans",  sans-serif;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+}
+
+input {
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid white;
+  caret-color: white;
+  text-align: center;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul,
+li {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.noshow {
+  visibility: hidden;
+}
+
+@keyframes showscreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.show {
+  animation: showscreen 1s ease-in-out forwards;
+}

@@ -1,0 +1,55 @@
+/* Top bar */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-menu);
+}
+
+/* 간단 북마크바 */
+
+.bookmark {
+  display: flex;
+  align-items: center;
+}
+.bookmark > a > i,
+.bookmark > a > img {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: var(--color-subfont);
+  text-align: center;
+  margin: 10px;
+}
+
+/* 날씨 */
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.weather-info__icon {
+  height: 40px;
+  width: 40px;
+}
+.weather-info__temper {
+  font-size: 30px;
+}
+.weather-city {
+  font-size: 13px;
+  text-align: center;
+  line-height: 0.5;
+}
+.weather-info__temper,
+.weather-city {
+  color: var(--color-subfont);
+}

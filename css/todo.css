@@ -1,0 +1,78 @@
+.todolist {
+  background-color: var(--color-menu);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  position: relative;
+}
+
+.todolist > h1 {
+  font-size: 30px;
+  color: var(--color-point);
+}
+
+.todoform > input {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.finished,
+.pending {
+  background-color: var(--color-background);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.finished > h3,
+.pending > h3 {
+  font-size: 20px;
+  text-align: center;
+  color: var(--color-font);
+}
+
+.finishedtodo > li,
+.pendingtodo > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finishedtodo > li > *,
+.pendingtodo > li > * {
+  font-size: 20px;
+  color: var(--color-font);
+}
+
+.finishedtodo > li > input,
+.pendingtodo > li > input {
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.finishedtodo > li > span {
+  text-decoration: line-through;
+}
+
+.deltodo {
+  color: var(--color-subfont);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 90%;
+  opacity: 0.5;
+}
+.deltodo:hover {
+  background-color: var(--color-background);
+  opacity: 1;
+}

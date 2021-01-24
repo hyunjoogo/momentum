@@ -1,0 +1,88 @@
+/* 랜덤 배경화면 액자형식 */
+.randombackground {
+  background-image: url(https://source.unsplash.com/random);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100%;
+}
+
+.row1,
+.row3,
+.row5,
+.row7,
+.row9 {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row0,
+.row2,
+.row4,
+.row6,
+.row8 {
+  width: 10px;
+  background-color: var(--color-background);
+}
+
+.row1 > div:nth-child(1) {
+  flex-grow: 0.2;
+  background-color: var(--color-background);
+}
+.row1 > div:nth-child(2) {
+  flex-grow: 10;
+}
+.row1 > div:nth-child(3) {
+  flex-grow: 0.1;
+  background-color: var(--color-background);
+}
+
+.row3 > div:nth-child(1) {
+  flex-grow: 0.5;
+  background-color: var(--color-background);
+}
+.row3 > div:nth-child(2) {
+  flex-grow: 10;
+}
+.row3 > div:nth-child(3) {
+  flex-grow: 0.5;
+  background-color: var(--color-background);
+}
+
+.row5 > div:nth-child(1) {
+  flex-grow: 0.2;
+  background-color: var(--color-background);
+}
+.row5 > div:nth-child(2) {
+  flex-grow: 10;
+}
+.row5 > div:nth-child(3) {
+  flex-grow: 0.2;
+  background-color: var(--color-background);
+}
+
+.row7 > div:nth-child(1) {
+  flex-grow: 0.8;
+  background-color: var(--color-background);
+}
+.row7 > div:nth-child(2) {
+  flex-grow: 10;
+}
+.row7 > div:nth-child(3) {
+  flex-grow: 0.8;
+  background-color: var(--color-background);
+}
+
+.row9 > div:nth-child(1) {
+  flex-grow: 0.4;
+  background-color: var(--color-background);
+}
+.row9 > div:nth-child(2) {
+  flex-grow: 10;
+}
+.row9 > div:nth-child(3) {
+  flex-grow: 0.2;
+  background-color: var(--color-background);
+}

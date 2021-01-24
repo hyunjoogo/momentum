@@ -1,83 +1,132 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="23.css">
-  <script src="https://kit.fontawesome.com/433848c43a.js" crossorigin="anonymous"></script>
-  <script src="./clock.js" defer></script>
-  <script src="./greeting.js" defer></script>
-  <script src="./weather.js" defer></script>
-  <title>Momentum clone</title>
-</head>
-<body>
-  <section class="weather">
-    <div class="weather-box">
-      <span class="weather-temp"></span>
-      <div class="weather-icon">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/433848c43a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="src/weather.js" defer></script>
+    <script src="src/greeting.js" defer></script>
+    <script src="src/clock.js" defer></script>
+    <script src="src/todolist.js" defer></script>
+    <title>My Momentem</title>
+  </head>
+  <body>
+    <!-- Top-Bar : 북마크, 날씨 -->
+    <div class="top noshow">
+      <!-- 간단 북마크바 -->
+      <section class="bookmark">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com/" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="https://www.google.com/" target="_blank"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a href="https://www.gmail.com/" target="_blank"
+          ><i class="far fa-envelope"></i
+        ></a>
+        <a href="https://nomadcoders.co/" target="_blank"
+          ><img src="img/nomad.svg" alt="nomadicon"
+        /></a>
+      </section>
+      <!-- 날씨 -->
+      <section class="weather">
+        <div class="weather-info">
+          <img src="#" alt="weathericon" class="weather-info__icon" />
+          <span class="weather-info__temper">11도</span>
+        </div>
+        <div class="weather-city">지역표시</div>
+      </section>
+    </div>
+    <!-- 이름 묻기 -->
+    <section class="askName">
+      <form action="" class="askNameForm">
+        <span class="askNameText">당신의 이름은 무엇입니까?</span>
+        <input type="text" class="askNameInput" />
+      </form>
+      <span class="helloScreen"></span>
+    </section>
+    <div class="middle noshow">
+      <!-- Middel-Left : 시간, 문구, To-Do -->
+      <div class="middle-left">
+        <!-- 시간 -->
+        <section class="time">
+          <span class="timeTitle">00:00</span>
+          <div class="clockswitch">
+            <span>12h / 24h</span>
+            <input type="checkbox" name="" id="hour12" />
+            <label for="hour12">
+              <span>선택</span>
+            </label>
+          </div>
+        </section>
+        <!-- 인사 문구 -->
+        <section class="greeting">
+          <p class="greetingText">인사문구</p>
+          <p class="greetingName"></p>
+        </section>
+        <!-- To-Do List -->
+        <section class="todolist">
+          <h1>To-Do List</h1>
+          <form action="#" class="todoform">
+            <input type="text" name="item" placeholder="할 일을 적으세요 🙌" />
+          </form>
+          <div class="deltodo">
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="pending">
+            <h3>아직 할 일 🤔</h3>
+            <ul class="pendingtodo"></ul>
+          </div>
+          <div class="finished">
+            <h3>완료 된 일 🎉</h3>
+            <ul class="finishedtodo"></ul>
+          </div>
+        </section>
+      </div>
+      <!-- Middel-right : 액자 -->
+      <div class="middle-right">
+        <!-- 랜덤 배경 액자 -->
+        <setion class="randombackground">
+          <div class="row0"></div>
+          <div class="row1">
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+          </div>
+          <div class="row2"></div>
+          <div class="row3">
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+          </div>
+          <div class="row4"></div>
+          <div class="row5">
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+          </div>
+          <div class="row6"></div>
+          <div class="row7">
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+          </div>
+          <div class="row8"></div>
+          <div class="row9">
+            <div class="col1"></div>
+            <div class="col2"></div>
+            <div class="col3"></div>
+          </div>
+          <div class="row0"></div>
+        </setion>
       </div>
     </div>
-    <span class="weather-city"></span>
-  </section>
-  <h1 class="hello-screen"></h1>
-  <section class="askname">
-    <h1>당신의 이름은 무엇인가요?</h1>
-    <form action="" method="GET" class="askNameForm">
-      <input type="text" class="askNameInput">
-    </form>
-  </section>
-  <div class="main-wrapper">
-    <section class="clock">
-      <div class="row">
-        <div class="col-md-12"></div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3 col-md-4"></div>
-        <div class="col-sm-6 col-md-4">
-          <span class="clock-screen"></span>
-        </div>
-        <div class="col-sm-3 col-md-4">
-          <div class="more-wrapper">
-            <div class="icon-wrapper">
-              <i class="fas fa-ellipsis-h icon-ellipsis"></i>
-            </div>
-            <div class="dropdown-menu">
-              <input id="s2" type="checkbox" class="switch" checked>
-              <label for="s2">12/24</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="greeting">
-      <h1 class="greeting-screen"></h1>
-    </section>
-    <section class="importantWork">
-      <div class="importantWork-ask__container">
-        <h2 class="importantwork-ask">오늘 가장 중요한 일은 무엇인가요?</h2>
-        <form action="" method="GET" class="importantwork-form">
-          <input type="text" class="importantwork-input">
-        </form>
-      </div>
-      <div class="importantwork-screen__container">
-        <h3 class="importantwork-screen-today">Today</h3>
-        <div class="importantwork-screen-list">
-          <div class="importantwork-screen-check">
-            <i class="far fa-square icon-square"></i>
-            <i class="fas fa-check icon-check"></i>
-          </div>
-          <span class="importantWork-screen-text"></span>
-          <span class="importantwork-screen-del">
-            <i class="fas fa-times icon-times"></i>
-          </span>
-        </div>
-      </div>
-    </section>
-    <section class="quotes">
-    </section>
-  </div>
-</body>
+  </body>
 </html>
-                      

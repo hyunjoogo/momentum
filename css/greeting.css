@@ -1,0 +1,14 @@
+.greetingText,
+.greetingName {
+  font-size: 50px;
+  color: var(--color-font);
+  text-align: center;
+}
+
+.greetingText {
+  color: var(--color-point);
+}
+.greetingName {
+  line-height: 1;
+  margin-bottom: 20px;
+}
